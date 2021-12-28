@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function distribuiCaractere () {
+        //seleciona valor digitado
+        var caractere = document.getElementById('entrada').value
+        //limpa o campo
+        document.getElementById('entrada').value = ''
+        //limpa espaços em branco nas estremidades
+        caractere.trim()
+
+        switch (caractere) {
+          case '0':
+          case '1':
+          case '2':
+          case '3':
+          case '4':
+          case '5':
+          case '6':
+          case '7':
+          case '8':
+          case '9':
+          document.getElementById('numeros').value += caractere
+            break;
+          default:
+          document.getElementById('letras').value += caractere
+            break;
+        }
+
+
+      }
+    </script>
+  </head>
+  <body>
+
+    <input type="text" onkeyup="distribuiCaractere()"
+      placeholder="Digite seu nome"
+      id="entrada"
+      class="campo_texto"
+      name="nome"
+    >
+    <br>
+    <script type="text/javascript">
+      //console.log(document.getElementById('nome_usuario'))
+    </script>
+    <span>Letras:</span>
+    <input type="text" disabled="disabled" id="letras" >
+    <br>
+    <span>Números:</span>
+    <input type="text" disabled="disabled" id="numeros">
+  </body>
+</html>
