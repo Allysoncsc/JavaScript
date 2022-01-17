@@ -7,11 +7,13 @@
 //console.log(Math.pow(2,10));
 //console.log(2 ** 10);
 
-//const numero = prompt('Digite seu numero: '); retorna string
+//const numero = Number(prompt('Digite seu numero: ')); prompt retorna string
 let numero = prompt('Digite seu numero: ');
 numero = Number(numero);
 const numeroTitulo = document.getElementById('numero-titulo');
 const texto = document.getElementById('texto');
 
 numeroTitulo.innerHTML = numero;
-texto.innerHTML = `<p>Seu numero + 2 é ${numero + 2}. </p>`;
+texto.innerHTML = `<p>Raiz quadrada é: ${numero ** 0.5}. </p>`;
+texto.innerHTML += `<p>${numero} é inteiro: ${Number.isInteger(numero)}. </p>`;
+texto.innerHTML += `<p>Raiz quadrada é: ${numero ** 0.5}. </p>`;
