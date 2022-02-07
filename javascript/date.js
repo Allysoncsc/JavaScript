@@ -1,9 +1,10 @@
 const data = new Date(1990, 3, 02, 15,25);//02/04/1990 15:25
-console.log(data,toString);
+console.log(data.toString());
 
 const tresHoras = 60 * 60 * 3 * 1000;// min * h *quanidadedeHoras * millissegundos
 const umDia = 60 * 60 * 24 * 1000;
-console.log(data,toString) + tresHoras + umDia;
+const diatres = new Date(data + umDia);
+console.log(diatres.toString());
 
 //dataString = valor do tipo tring que representa uma data
 const dataAtual= new Date('2022-02-06 22:16');
