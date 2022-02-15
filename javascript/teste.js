@@ -35,4 +35,28 @@ function maior(x,y){
 
 // arrowfunction que retorna o maior de 2 numeros
 const max = (x,y) => { return x>y ? x : y;}
+//arrow function que retorna true ou false
 const epaisagem = (largura, altura) => { largura >= altura}
+
+const funcaoArrow = () => {console.log('Uma arrow function');}
+
+const souUmDado = function(){
+    console.log('Sou um dado');
+};
+/*
+setInterval(function(){
+
+}, 1000);
+
+
+setInterval(funcaoArrow(),1000);
+*/
+
+const cachorro = {
+    latir () {
+        console.log('Au, Au');
+    }
+}
+cachorro.latir();
+
+
