@@ -10,6 +10,8 @@ btnTarefa.addEventListener('click', function(e){
 function criaTarefa(textoInput){
     const li = criaLi();
     li.innerText = textoInput;
+    limpaInput();
+    criaBotaoApagar(li);
 }
 
 inputTarefa.addEventListener('keypress', function(){
@@ -18,13 +20,29 @@ inputTarefa.addEventListener('keypress', function(){
         criaTarefa(inputTarefa.value);
     }
 })
+
 function criaLi(){
     const li = document.createElement('li');
     return li;
 }
-
+function criaBotaoApagar(li){
+    li.innerText += ' ';
+    const botaoApagar = document.createElement('button');
+    //botaoApagar.classList.add('apagar');
+    botaoApagar.setAttribute('class', 'apagar');
+    botaoApagar.setAttribute('title', 'apagar esta tarefa');
+    botaoApagar.innerText = 'Apagar';
+    li.appendChild(botaoApagar);
+}
 function limpaInput(){
     inputTarefa.value = '';
     inputTarefa.focus();
 }
 
+document.addEventListener('click',function(e){
+    const el = e.target;
+
+    if(el.classList.contais('apagar')){
+        el.parentElement.remove();
+    }
+});
