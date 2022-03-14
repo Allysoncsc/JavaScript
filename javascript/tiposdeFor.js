@@ -22,7 +22,7 @@ for (const key in pessoa) {
 }
 
 
-// aula 56 for on percorre o valor de um array
+// aula 56 for of percorre o valor de um array
 for (const valor of frutas) {
     console.log(valor);
 }
