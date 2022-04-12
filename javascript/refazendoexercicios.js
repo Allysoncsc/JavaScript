@@ -15,13 +15,29 @@ for (let p of ps){
 }
 
 
+// aula 63 try catch
+try {
+    console.log(naoExiste);
+}catch(e){
+    console.log('')
+}
+
+function som(x,y){
+    if (typeof x !== 'number' || y !== 'number'){
+        throw('x e y precisam ser números');
+        // throw new Error('x e y precisam ser números') lança o erro
+    }
+    return x+y;
+}
 
 
-
-
-
-
-
+try{
+    console.log(soma(1,2))
+    console.log(soma('1',2))
+} catch(e) {
+    //console.log(e);
+    console.log('Uma mensagem mais amigável para o usuário');
+}
 
 
 
@@ -49,9 +65,12 @@ console.log(maxarrow(10,20));
 
 function fizzBuzz(n){
     if (typeof n !== 'number') return NaN;
-    if (n % 3 === 0 && n % === 0) return 'FizzBuzz';
+    if (n % 3 === 0 && n % 5 === 0) return 'FizzBuzz';
     if (n % 3 === 0) return 'Fizz';
     if (n % 5 === 0) return 'Buzz';
     return n;
 }
 
+for (let i = 0; i <= 50; i++){
+    console.log(i, fizzBuzz(i));
+}
