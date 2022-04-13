@@ -37,12 +37,29 @@ try{
 } catch(e) {
     //console.log(e);
     console.log('Uma mensagem mais amigável para o usuário');
+} finally{
+    console.log('FINALL: Sempre é executado');
 }
 
 
 
+// aula 64
+function retornaHora(date){
+    if(date && !(date instanceof Date)){
+        throw new TypeError('Esperando instância de Date')
+    }
 
+    if (!date){
+        date = new Date();
+    }
 
+    return date.toLacaleTimeString('pt-BR', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+    });
+}
 
 
 
