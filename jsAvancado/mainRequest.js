@@ -4,8 +4,8 @@ fetch('../json/pessoas.json')
 //.then(json => console.log(json));
 .then(json => carregaElementosnaPagina(json));
 
-axios('../json/pessoas.json')
-.then(resposta => carregaElementosnaPagina(resposta.data))
+// axios('../json/pessoas.json')
+// .then(resposta => carregaElementosnaPagina(resposta.data))
 
 function carregaElementosnaPagina(json){
     const table = document.createElement('table');
